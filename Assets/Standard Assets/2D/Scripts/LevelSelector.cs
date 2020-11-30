@@ -26,4 +26,19 @@ public class LevelSelector : MonoBehaviour
     {
     	SceneManager.LoadScene("LevelSelect");
     }
+
+    public void LoadBossLevel()
+    {
+        SceneManager.LoadScene("Boss");
+    }
+
+    public static void LoadDeathLevel()
+    {
+        SceneManager.LoadScene("DeathLevel");
+    }
+
+    public static void LoadVictoryLevel()
+    {
+        SceneManager.LoadScene("VictoryLevel");
+    }
 }

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class GameControl : MonoBehaviour
 {
-    public GameObject heart1, heart2, heart3, incorrectText, gameOver;
+    public GameObject heart1, heart2, heart3, incorrectText, character;
     public static int health, recently_hit;
     public static bool finish;
     public static int var1, var2, var3;
@@ -14,14 +14,14 @@ public class GameControl : MonoBehaviour
 
     void Start()
     {
+
+
         health = 3;
         recently_hit = 0;
         
         heart1.gameObject.SetActive(true);
         heart2.gameObject.SetActive(true);
         heart3.gameObject.SetActive(true);
-        gameOver.gameObject.SetActive(false);
-
 
         incorrectText.gameObject.SetActive(false);
 
@@ -39,7 +39,14 @@ public class GameControl : MonoBehaviour
     {
         if (finish) 
         {
-            Debug.Log("CORRECT");
+            finish = false;
+
+            var1 = 0;
+            var2 = 0;
+            var3 = 0;
+
+            LevelSelector.LoadVictoryLevel();
+
         }
 
 
@@ -78,8 +85,7 @@ public class GameControl : MonoBehaviour
                 heart1.gameObject.SetActive(false);
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
-                Time.timeScale = 0;
+                LevelSelector.LoadDeathLevel();
                 break;
         } 
     }

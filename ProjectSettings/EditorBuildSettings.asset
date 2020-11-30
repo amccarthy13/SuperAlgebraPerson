@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: e0fac80ba79f3433e8b40a7882af083e
+  - enabled: 1
+    path: Assets/Scenes/Boss.unity
+    guid: f514160da5de4d44e994f01186bcfe65
+  - enabled: 1
+    path: Assets/Scenes/DeathLevel.unity
+    guid: 64aedb69bfe26474bb34a20e8f153ab7
+  - enabled: 1
+    path: Assets/Scenes/VictoryLevel.unity
+    guid: 6d89ac9cc04ed4306a65bda20dd66b21
   m_configObjects: {}

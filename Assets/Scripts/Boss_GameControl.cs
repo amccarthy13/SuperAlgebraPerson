@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Boss_GameControl : MonoBehaviour
 {
-    public GameObject heart1, heart2, heart3, gameOver;
+    public GameObject heart1, heart2, heart3;
     public static int health, recently_hit;
 
     void Start()
@@ -15,7 +15,6 @@ public class Boss_GameControl : MonoBehaviour
         heart1.gameObject.SetActive(true);
         heart2.gameObject.SetActive(true);
         heart3.gameObject.SetActive(true);
-        gameOver.gameObject.SetActive(false);
     }
     void Update()
     {
@@ -23,7 +22,6 @@ public class Boss_GameControl : MonoBehaviour
         {
             recently_hit -= 1;
         }
-
         switch (health)
         {
             case 3:
@@ -45,8 +43,7 @@ public class Boss_GameControl : MonoBehaviour
                 heart1.gameObject.SetActive(false);
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
-                Time.timeScale = 0;
+                LevelSelector.LoadDeathLevel();
                 break;
 
         }
