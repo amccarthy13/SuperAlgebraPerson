@@ -28,7 +28,7 @@ public class FinishBox : MonoBehaviour
 	    	}
 	 		else
 	 		{
-	 			GameControl.health -= 1;
+                GameControl.health -= 1;
 	 			incorrectText.gameObject.SetActive(true);
 	 			yield return new WaitForSeconds(3.0f);
 	 			incorrectText.gameObject.SetActive(false);
