@@ -8,8 +8,8 @@ public class Boss_GameControl : MonoBehaviour
     public GameObject heart1, heart2, heart3, incorrectText;
     public static int health, recently_hit;
     public static bool finish;
-    public static int var1, var2, var3;
-    public GameObject var1Obj, var2Obj, var3Obj;
+    public static int var1, var2;
+    public GameObject var1Obj, var2Obj;
 
     void Start()
     {
@@ -24,11 +24,9 @@ public class Boss_GameControl : MonoBehaviour
 
         var1Obj.GetComponent<UnityEngine.UI.Text>().text = "X";
         var2Obj.GetComponent<UnityEngine.UI.Text>().text = "Y";
-        var3Obj.GetComponent<UnityEngine.UI.Text>().text = "Z";
 
         var1 = 0;
         var2 = 0;
-        var3 = 0;
 
         finish = false;
     }
@@ -40,7 +38,6 @@ public class Boss_GameControl : MonoBehaviour
 
             var1 = 0;
             var2 = 0;
-            var3 = 0;
 
             LevelSelector.LoadVictoryLevel();
 
@@ -92,7 +89,6 @@ public class Boss_GameControl : MonoBehaviour
                 
                 var1 = 0;
                 var2 = 0;
-                var3 = 0;
 
                 LevelSelector.LoadDeathLevel();
                 break;

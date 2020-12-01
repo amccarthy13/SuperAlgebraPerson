@@ -27,13 +27,9 @@ public class Boss_NumberChest : MonoBehaviour
             {
 	    	 	Boss_GameControl.var1 = value;
             }
-            else if (var == 2)
+            else
             {
                 Boss_GameControl.var2 = value;
-            }
-            else 
-            {
-                Boss_GameControl.var3 = value;
             }
 	    }
     }
