@@ -34,7 +34,6 @@ public class Boss_FinishBox : MonoBehaviour
                     Boss_GameControl.recently_hit = 500;
                 }
                 
-                Boss_GameControl.recently_hit = 500;
 	 			incorrectText.gameObject.SetActive(true);
 	 			yield return new WaitForSeconds(3.0f);
 	 			incorrectText.gameObject.SetActive(false);

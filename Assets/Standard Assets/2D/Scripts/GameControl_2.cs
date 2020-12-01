@@ -69,7 +69,7 @@ public class GameControl_2 : MonoBehaviour
 
         if (var3 == 0)
         {
-            var3Obj.GetComponent<UnityEngine.UI.Text>().text = "Y";
+            var3Obj.GetComponent<UnityEngine.UI.Text>().text = "Z";
         }
         else 
         {
