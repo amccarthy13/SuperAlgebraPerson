@@ -17,11 +17,11 @@ public class bird_1 : MonoBehaviour
         if (MoveSide)
         {
             transform.Translate(2 * Time.deltaTime * speed, 0, 0);
-            if (MoveRight < 500)
+            if (MoveRight < 400)
             {
                 MoveRight += 1;
             }
-            else if (MoveRight >= 500)
+            else if (MoveRight >= 400)
             {
                 MoveSide = false;
                 MoveRight = 0;
@@ -30,11 +30,11 @@ public class bird_1 : MonoBehaviour
         else if (!MoveSide)
         {
             transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
-            if (MoveLeft < 500)
+            if (MoveLeft < 400)
             {
                 MoveLeft += 1;
             }
-            else if (MoveLeft >= 500)
+            else if (MoveLeft >= 400)
             {
                 MoveSide = true;
                 MoveLeft = 0;
