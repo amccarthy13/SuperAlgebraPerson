@@ -21,7 +21,7 @@ public class boss_bird : MonoBehaviour
             {
                 MoveRight += 1;
             }
-            else if (MoveRight == 500)
+            else if (MoveRight >= 500)
             {
                 MoveSide = false;
                 MoveRight = 0;
@@ -34,12 +34,13 @@ public class boss_bird : MonoBehaviour
             {
                 MoveLeft += 1;
             }
-            else if (MoveLeft == 500)
+            else if (MoveLeft >= 500)
             {
                 MoveSide = true;
                 MoveLeft = 0;
             }
         }
+        
         if (MoveVert)
         {
             transform.Translate(0, Time.deltaTime * speed, 0);
@@ -47,7 +48,7 @@ public class boss_bird : MonoBehaviour
             {
                 MoveUp += 1;
             }
-            else if (MoveUp == 100)
+            else if (MoveUp >= 100)
             {
                 MoveVert = false;
                 MoveUp = 0;
@@ -60,7 +61,7 @@ public class boss_bird : MonoBehaviour
             {
                 MoveDown += 1;
             }
-            else if (MoveDown == 100)
+            else if (MoveDown >= 100)
             {
                 MoveVert = true;
                 MoveDown = 0;
@@ -71,7 +72,7 @@ public class boss_bird : MonoBehaviour
     void OnTriggerEnter2D (Collider2D col)
     {
         Debug.Log(col.name);
-        if (Boss_GameControl.recently_hit == 0 && !string.Equals(col.name, "Bullet(Clone)"))
+        if (Boss_GameControl.recently_hit <= 0 && !string.Equals(col.name, "Bullet(Clone)"))
         {
             Boss_GameControl.health -= 1;
             Boss_GameControl.recently_hit = 500;

@@ -21,7 +21,7 @@ public class bird_2 : MonoBehaviour
             {
                 MoveRight += 1;
             }
-            else if (MoveRight == 500)
+            else if (MoveRight >= 500)
             {
                 MoveSide = false;
                 MoveRight = 0;
@@ -34,7 +34,7 @@ public class bird_2 : MonoBehaviour
             {
                 MoveLeft += 1;
             }
-            else if (MoveLeft == 500)
+            else if (MoveLeft >= 500)
             {
                 MoveSide = true;
                 MoveLeft = 0;
@@ -47,7 +47,7 @@ public class bird_2 : MonoBehaviour
             {
                 MoveUp += 1;
             }
-            else if (MoveUp == 100)
+            else if (MoveUp >= 100)
             {
                 MoveVert = false;
                 MoveUp = 0;
@@ -60,7 +60,7 @@ public class bird_2 : MonoBehaviour
             {
                 MoveDown += 1;
             }
-            else if (MoveDown == 100)
+            else if (MoveDown >= 100)
             {
                 MoveVert = true;
                 MoveDown = 0;
@@ -70,7 +70,7 @@ public class bird_2 : MonoBehaviour
     }
     void OnTriggerEnter2D (Collider2D col)
     {
-        if (GameControl_2.recently_hit == 0)
+        if (GameControl_2.recently_hit <= 0)
         {
             GameControl_2.health -= 1;
             GameControl_2.recently_hit = 500;
